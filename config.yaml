@@ -1,0 +1,40 @@
+# Server host/interface to bind to.
+host: ""
+
+# Server port
+port: 8317
+
+# Management API settings
+remote-management:
+  # Diaktifkan agar bisa diakses dari domain api.sendr.web.id
+  allow-remote: true
+  # Silakan ganti key ini nanti untuk keamanan management panel
+  secret-key: "sendr123"
+
+# Authentication directory (lokasi token di dalam docker)
+auth-dir: "/root/.cli-proxy-api"
+
+# API Key untuk akses API Anda
+api-keys:
+  - "sendr-api-key"
+
+# Logging
+debug: false
+logging-to-file: false
+
+# Retries
+request-retry: 3
+
+# Routing
+routing:
+  strategy: "round-robin"
+
+# OAuth model name aliases
+oauth-model-alias:
+  antigravity:
+    - name: "rev19-uic3-1p"
+      alias: "gemini-2.5-computer-use-preview-10-2025"
+    - name: "gemini-3-pro-high"
+      alias: "gemini-3-pro-preview"
+    - name: "gemini-3-flash"
+      alias: "gemini-3-flash-preview"

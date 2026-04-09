@@ -3,8 +3,7 @@ cli-proxy-api
 *.exe
 
 # Configuration
-config.yaml
-.env
+# (Configuration files are now tracked for easy deployment)
 
 # Generated content
 bin/*
